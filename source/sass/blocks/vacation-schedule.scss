@@ -1,0 +1,112 @@
+.vacation-schedule {
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #2D2E2E;
+  }
+}
+
+.vacation-schedule__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0 17px 20px;
+  background-color: #F7F7F7;
+}
+
+.vacation-schedule__year-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 107px;
+  font-size: 18px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.vacation-schedule__year-btn-prev {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.vacation-schedule__table-titles {
+  display: flex;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #F7F7F7;
+
+  span {
+    flex-grow: 1;
+
+    &:nth-child(1) {
+      flex-grow: 0;
+      width: 111px;
+    }
+
+    &:nth-child(2) {
+      flex-grow: 0;
+      width: 49px;
+      margin-right: 9px;
+    }
+  }
+}
+
+.vacation-schedule__staff {
+  font-size: 12px;
+}
+
+.vacation-schedule__employee {
+  display: flex;
+  align-items: center;
+  min-height: 49px;
+  border-bottom: 1px solid #F7F7F7;
+}
+
+.vacation-schedule__employee-personal-info {
+  display: flex;
+  align-items: center;
+  width: 111px;
+}
+
+.vacation-schedule__employee-photo {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.vacation-schedule__days {
+  width: 49px;
+  margin-right: 9px;
+  text-align: center;
+}
+
+.vacation-schedule__month {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 21px;
+  flex-grow: 1;
+}
+
+.vacation-schedule__day {
+  width: 8px;
+  height: 3px;
+  margin-right: 2px;
+}

@@ -1,0 +1,53 @@
+.executive-desk {
+  display: flex;
+  height: 576px;
+  margin-top: 80px;
+}
+
+.executive-desk__sidebar {
+  width: 100px;
+  background-color: #393A3F;
+}
+
+.executive-desk__content {
+  width: 978px;
+  padding: 30px 20px;
+  background-color: #FFFFFF;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0 16px;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #000000;
+  }
+}
+
+.executive-desk__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+  padding: 6px 16px;
+  background-color: #F7F7F7;
+
+  a {
+    min-width: 153px;
+    margin-right: 20px;
+    padding: 17px 36px 16px 36px;
+    text-align: center;
+    color: #556080;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+
+    &:nth-child(2) {
+      min-width: 168px;
+    }
+
+    &.active {
+      color: #CACACA;
+      background-color: #556080;
+    }
+  }
+}

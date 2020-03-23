@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.")
+    title dashboard
+    link(rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous")
+    link(rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous")
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body
+    main
+      section.executive-desk
+        .executive-desk__sidebar
+        .executive-desk__content
+          h1 Рабочий стол руководителя
+
+          .executive-desk__tabs
+            a.active(href="#") Dashboard
+            a(href="#") Team line up
+
+          section.vacation-schedule
+            .vacation-schedule__header
+              h2 График отпусков
+              .vacation-schedule__year-navigation
+                button.vacation-schedule__year-btn-prev(type="button" aria-label="Предыдущий год")
+                  svg(width="7" height="12")
+                    use(xlink:href="img/icons/sprite.svg#arrow")
+                span 2019
+                button.vacation-schedule__year-btn-next(type="button" aria-label="Следующий год")
+                  svg(width="7" height="12")
+                    use(xlink:href="img/icons/sprite.svg#arrow")
+
+            .vacation-schedule__table-titles
+              span Фамилия, Имя
+              span дней
+              span Янв
+              span Фев
+              span Мар
+              span Апр
+              span Май
+              span Июн
+              span Июл
+              span Авг
+              span Сен
+              span Окт
+              span Ноя
+              span Дек
+
+            .vacation-schedule__staff.js-staff-list
+
+    template(id="employee")
+      .vacation-schedule__employee
+        .vacation-schedule__employee-personal-info
+          .vacation-schedule__employee-photo
+            img(src="img/photo.png" width="32" height="32" alt="Иван Иванов")
+          span.vacation-schedule__employee-name Иван Иванов
+        span.vacation-schedule__days 14/28
+
+    template(id="popup")
+      .popup
+        .popup__employee-personal-info
+          .popup__employee-photo
+            img(src="img/photo-2.png" width="54" height="54" alt="Катерина Иванова")
+          span.popup__employee-name Катерина Иванова
+        .popup__vacation-color
+        p.popup__vacation-days 09.08.2019 — 23.08.2019 (14д.)
+        span.popup__vacation-type отпуск
+
+    script(src='js/script.min.js')

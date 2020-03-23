@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit.">
+    <title>dashboard</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <main>
+      <section class="executive-desk">
+        <div class="executive-desk__sidebar"></div>
+        <div class="executive-desk__content">
+          <h1>Рабочий стол руководителя</h1>
+          <div class="executive-desk__tabs"><a class="active" href="#">Dashboard</a><a href="#">Team line up</a></div>
+          <section class="vacation-schedule">
+            <div class="vacation-schedule__header">
+              <h2>График отпусков</h2>
+              <div class="vacation-schedule__year-navigation">
+                <button class="vacation-schedule__year-btn-prev" type="button" aria-label="Предыдущий год">
+                  <svg width="7" height="12">
+                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                  </svg>
+                </button><span>2019</span>
+                <button class="vacation-schedule__year-btn-next" type="button" aria-label="Следующий год">
+                  <svg width="7" height="12">
+                    <use xlink:href="img/icons/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="vacation-schedule__table-titles"><span>Фамилия, Имя</span><span>дней</span><span>Янв</span><span>Фев</span><span>Мар</span><span>Апр</span><span>Май</span><span>Июн</span><span>Июл</span><span>Авг</span><span>Сен</span><span>Окт</span><span>Ноя</span><span>Дек</span></div>
+            <div class="vacation-schedule__staff js-staff-list"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <template id="employee">
+      <div class="vacation-schedule__employee">
+        <div class="vacation-schedule__employee-personal-info">
+          <div class="vacation-schedule__employee-photo"><img src="img/photo.png" width="32" height="32" alt="Иван Иванов"></div><span class="vacation-schedule__employee-name">Иван Иванов</span>
+        </div><span class="vacation-schedule__days">14/28</span>
+      </div>
+    </template>
+    <template id="popup">
+      <div class="popup">
+        <div class="popup__employee-personal-info">
+          <div class="popup__employee-photo"><img src="img/photo-2.png" width="54" height="54" alt="Катерина Иванова"></div><span class="popup__employee-name">Катерина Иванова</span>
+        </div>
+        <div class="popup__vacation-color"></div>
+        <p class="popup__vacation-days">09.08.2019 — 23.08.2019 (14д.)</p><span class="popup__vacation-type">отпуск</span>
+      </div>
+    </template>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
